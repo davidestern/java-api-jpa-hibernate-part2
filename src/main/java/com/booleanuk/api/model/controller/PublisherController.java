@@ -60,7 +60,7 @@ public class PublisherController {
             return ResponseEntity.ok(publisherResponse);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body("No publisher with that id were found.");
+                    .body("Could not update publisher, please check all required fields are correct.");
         }
     }
 
@@ -73,7 +73,7 @@ public class PublisherController {
             return ResponseEntity.ok(publisherResponse);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body("No publisher with that id were found.");
+                    .body("Could not delete publisher, please check the id is correct.");
         }
     }
 }
